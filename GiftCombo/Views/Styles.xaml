@@ -1,0 +1,26 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Colours / fonts -->
+    <Color  x:Key="Accent">#FF2196F3</Color>
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource Accent}" />
+
+    <!-- Buttons -->
+    <Style TargetType="Button">
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Padding" Value="6,2"/>
+        <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <!-- DataGrid -->
+    <Style TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="CanUserAddRows"      Value="False"/>
+        <Setter Property="CanUserDeleteRows"   Value="False"/>
+        <Setter Property="Margin"              Value="4"/>
+        <Setter Property="GridLinesVisibility" Value="None"/>
+        <Setter Property="RowHeaderWidth"      Value="0"/>
+    </Style>
+</ResourceDictionary>

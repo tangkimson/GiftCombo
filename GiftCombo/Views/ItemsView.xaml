@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="GiftCombo.Views.ItemsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:GiftCombo.ViewModels">
+
+    <DockPanel Margin="4">
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,4">
+            <Button Content="Refresh" Command="{Binding RefreshCmd}" Margin="0,0,4,0"/>
+            <Button Content="Add"     Command="{Binding AddCmd}"     Margin="0,0,4,0"/>
+            <Button Content="Delete"  Command="{Binding DeleteCmd}"  Margin="0,0,4,0"/>
+            <Button Content="Save"    Command="{Binding SaveCmd}"    Margin="0,0,4,0" />
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding Items}"
+            SelectedItem="{Binding Selected, Mode=TwoWay}"
+            AutoGenerateColumns="False">
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"
+                                    Binding="{Binding ItemId}"
+                                    Width="60"
+                                    IsReadOnly="True"/>
+
+                <DataGridTextColumn Header="Name"
+                                    Binding="{Binding Name}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="Type"
+                                    Binding="{Binding ItemType}"
+                                    Width="120"/>
+
+                <DataGridTextColumn Header="Price"
+                                    Binding="{Binding Price, StringFormat={}{0:N2}}"
+                                    Width="100"/>
+
+                <DataGridTextColumn Header="Stock"
+                                    Binding="{Binding StockQty}"
+                                    Width="80"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,39 @@
+GiftCombo/
+│
+│  ItemComboManager.csproj
+│  App.xaml
+│  App.xaml.cs
+│  MainWindow.xaml
+│  MainWindow.xaml.cs
+│
+├─Common/
+│     ViewModelBase.cs
+│     RelayCommand.cs
+│
+├─Converters/
+│     EnumToStringConverter.cs
+│     BoolToVisibilityConverter.cs
+│
+├─Database/
+│  ├─Repositories/
+│  │     ItemRepository.cs
+│  │     ComboRepository.cs
+│  │     SaleRepository.cs
+│  └─Scripts/
+│        01_schema.sql
+│        02_seed_data.sql
+│        03_triggers_and_sp.sql
+│
+├─Models/
+│     Model.cs
+│
+├─ViewModels/
+│     ItemsViewModel.cs
+│     CombosViewModel.cs
+│     SalesViewModel.cs
+│
+└─Views/
+      ItemsView.xaml
+      CombosView.xaml
+      SalesView.xaml
+      Styles.xaml
